@@ -4,6 +4,7 @@
 
 branches:
   only:
+    - test5
     - master
     - 1.x
 
@@ -44,6 +45,8 @@ matrix:
       env: COMPOSER_FLAGS="--prefer-lowest"
     - php: '7.3'
       env: SYMFONY_DEPRECATIONS_HELPER=0
+    - php: '7.3'
+      env: SYMFONY=5.*
   allow_failures:
     - php: 7.4snapshot
     - php: nightly
